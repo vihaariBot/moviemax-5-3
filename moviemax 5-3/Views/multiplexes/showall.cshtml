@@ -1,0 +1,25 @@
+﻿@model List<moviemax_5_3.Models.multiplexmodel>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>showall</title>
+</head>
+<body>
+    @{Html.RenderAction("Index", "menu");}
+    <div> 
+        @{ 
+            foreach(var i in Model) {
+                <p>@i.mulid
+                    <a href="~/multiplexes/filterby?mid=@i.mulid">@i.mulname</a>
+                               @i.location</p>
+            }
+        }
+    </div>
+</body>
+</html>
