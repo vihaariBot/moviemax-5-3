@@ -9,6 +9,10 @@ namespace moviemax_5_3.Controllers
     public class movieController : Controller
     {
         // GET: movie
+        public ActionResult showall()
+        {
+            return View();
+        }
         public ActionResult filterby()
         {
             return View();
